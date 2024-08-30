@@ -1,21 +1,22 @@
-body{
-    background-color: var(--cor-de-fundo);
-   
+:root{
+    --cor-de-fundo: #1e1e1e;
+    --verde: #5FFF57;
+    --branco: #FFFFFF;
+    --botao-ativo: #3A375E;
+    --botao-inativo: rgba(58,55,94,0.5);
+    --texto-fundo: rgba(58,55,94,0.3);
 }
 
 *{
     color: var(--branco);
 }
 
-:root{
-    --verde: #5FFF57;
-    --cor-de-fundo: #1e1e1e;
-    --branco: #FFFFFF;
-    --botao-ativo: #3A375E;
-    --botao-inativo: rgba(58, 55, 94,0.5);
-    --texto-fundo: rgba(58, 55, 94,0.3);
+span{
+    color: var(--verde);
 }
-
+body{
+    background-color: var(--cor-de-fundo);
+}
 .conteudo-principal{
     display: flex;
     flex-direction: column;
@@ -24,6 +25,7 @@ body{
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+
 }
 
 .titulo-principal{
@@ -37,47 +39,47 @@ body{
     color: white;
     display: flex;
     justify-content: center;
+    /*Determina a posição horizontal no display flex*/
     align-items: center;
+    /*Determina a posição vertical no display flex*/
     width: 100%;
     font-size: 18px;
-    padding: 1em;
-
+    /*Controla o tamanho da fonte*/
+    padding: 1em ;
+    /* Um afastamento interno */
     border-bottom: 4px solid var(--botao-ativo);
     border-left: 2px solid var(--botao-ativo);
     border-right: 2px solid var(--botao-ativo);
-
 }
-
+.botoes{
+ display: block;   
+}
 .botao:first-child{
     border-radius: 20px 20px 0 0;
 }
 
 .botao:last-child{
-    border-radius: 0 0 20px 20px;
-}
-
-span{
-    color: var(--verde);
+    border-radius: 0px 0px 20px 20px;
 }
 .botao.ativo{
     background-color: var(--botao-ativo);
-    border-bottom: 2px solid var(--verde);
+    border-bottom: 2px solid var(--verde) ;
 }
 
-.abas-conteudo {
+.aba-conteudo{
     display: none;
 }
-.abas-conteudo.ativo{
+.aba-conteudo.ativo{
     display: block;
 }
-.abas-texto{
-    background-color: var(--botao-ativo);
+.abas-textos{
+    background-color: var(--botao-inativo);
     padding: 40px;
     border-radius: 15px;
 }
 .aba-conteudo-titulo-principal{
-font-size: 28px;
-text-align: center;
+    font-size: 28px;
+    text-align: center;
 }
 .aba-conteudo-titulo-secundario{
     text-align: center;
@@ -88,15 +90,10 @@ text-align: center;
     .botoes{
         display: flex;
     }
-
     .botao:first-child{
         border-radius: 20px 0 0 20px;
     }
-    
     .botao:last-child{
         border-radius: 0 20px 20px 0;
     }
-} 
-
-
-
+}
